@@ -6,6 +6,7 @@ const Home = () => <h2>Home Page</h2>;
 const Shop = () => <h2>Shop Page</h2>;
 const Cart = () => <h2>Cart Page</h2>;
 const Login = () => <h2>Login Page</h2>;
+const About = () => <h2>About Page</h2>;
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/shop" element={<Shop />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/about" element={<About />} />
       </Routes>
     </Router>
   );
