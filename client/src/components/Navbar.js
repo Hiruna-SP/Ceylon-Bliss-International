@@ -1,52 +1,89 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from "react-router-dom";
-import logo from './../assets/logo.png';
-import { FaShoppingCart, FaHeart, FaSearch } from "react-icons/fa";
+import logo from './../assets/Logo.jpg';
+import { FaShoppingCart, FaHeart, FaSearch, FaBars } from "react-icons/fa";
 
 const Navbar = () => {
-    return (
-        <nav className="bg-white shadow-md px-6 py-4 flex items-center justify-between flex-wrap">
-            {/* Logo */}
-            <div className="flex items-center gap-2">
-                <img src={logo} alt="Logo" className="h-12 w-auto" />
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  return (
+    <nav className="bg-white shadow-md px-4 py-3 flex items-center justify-between relative">
+      {/* Mobile Layout */}
+      <div className="md:hidden flex items-center justify-between w-full px-2">
+        {/* Left Side: Hamburger + Wishlist */}
+        <div className="flex items-center space-x-4">
+            <button onClick={() => setMenuOpen(!menuOpen)} className="text-black text-2xl hover:text-orange-500">
+            <FaBars />
+            </button>
+            <Link to="/wishlist" className="text-black text-xl hover:text-orange-500">
+            <FaHeart />
+            </Link>
+        </div>
+
+        {/* Center Logo */}
+        <div className="absolute left-1/2 transform -translate-x-1/2">
+            <img src={logo} alt="Logo" className="h-10 w-auto" />
+        </div>
+
+        {/* Right Side: Search + Cart */}
+        <div className="flex items-center space-x-4">
+            <Link to="/search" className="text-black text-xl hover:text-orange-500">
+            <FaSearch />
+            </Link>
+            <div className="relative">
+            <Link to="/cart" className="text-black text-xl hover:text-orange-500">
+                <FaShoppingCart />
+            </Link>
+            <span className="absolute -top-1 -right-1 bg-blue-500 text-white text-xs w-4 h-4 rounded-full flex items-center justify-center">0</span>
             </div>
+        </div>
+      </div>
 
-            {/* Navigation Links */}
-            <ul className="hidden md:flex space-x-10 text-base font-boldonse">
-                <li><Link to="/" className="hover:text-orange-500">Home</Link></li>
-                <li><Link to="/shop" className="hover:text-orange-500">Shop</Link></li>
-                <li><Link to="/cart" className="hover:text-orange-500">Cart</Link></li>
-                <li><Link to="/login" className="hover:text-orange-500">Login</Link></li>
-                <li><Link to="/about" className="hover:text-orange-500">About</Link></li>
-            </ul>
 
-            {/* Search + Icons (Right-aligned) */}
-            <div className="flex items-center space-x-6">
-                {/* Modern Search Bar with Black Border */}
-                <div className="hidden md:flex items-center bg-gray-100 border border-black rounded-full px-4 py-2 shadow-md focus-within:ring-2 focus-within:ring-green-500 transition-all duration-300">
-                    <input
-                    type="text"
-                    placeholder="Search spices..."
-                    className="bg-transparent outline-none text-sm w-40 md:w-60 px-2 placeholder-gray-500"
-                    />
-                    <button className="text-orange-500 hover:text-green-600 transition-all duration-300">
-                    <FaSearch className="text-lg" />
-                    </button>
-                </div>
+      {/* Desktop Layout */}
+      <div className="hidden md:flex items-center justify-between w-full">
+        {/* Logo */}
+        <div className="flex items-center gap-2">
+          <img src={logo} alt="Logo" className="h-14 w-auto ml-4" />
+        </div>
 
-                {/* Icons - Aligned Right */}
-                <div className="flex items-center space-x-4">
-                    <Link to="/wishlist" className="text-gray-600 hover:text-green-500 text-2xl">
-                    <FaHeart />
-                    </Link>
-                    <Link to="/cart" className="text-gray-600 hover:text-orange-500 text-2xl">
-                    <FaShoppingCart />
-                    </Link>
-                </div>
-            </div>
+        {/* Navigation Links */}
+        <ul className="flex space-x-10 text-base font-boldonse">
+          <li><Link to="/" className="hover:text-orange-500">Home</Link></li>
+          <li><Link to="/shop" className="hover:text-orange-500">Shop</Link></li>
+          <li><Link to="/cart" className="hover:text-orange-500">Cart</Link></li>
+          <li><Link to="/login" className="hover:text-orange-500">Login</Link></li>
+          <li><Link to="/about" className="hover:text-orange-500">About</Link></li>
+        </ul>
 
-        </nav>
-    );
+        {/* Search Bar + Icons */}
+        <div className="flex items-center space-x-6">
+          <div className="flex items-center gap-2 bg-white border border-black rounded-full px-4 py-2 shadow-lg transition-all duration-300 focus-within:ring-2 focus-within:ring-orange-400">
+            <input
+              type="text"
+              placeholder="Search"
+              className="bg-transparent w-44 md:w-60 px-2 text-sm text-gray-700 placeholder-gray-400 outline-none focus:w-64 transition-all duration-300"
+            />
+            <button
+              className="text-orange-500 hover:text-orange-600 focus-within:border-[4px] transition-all duration-15000"
+              aria-label="Search"
+            >
+              <FaSearch className="text-lg" />
+            </button>
+          </div>
+          <Link to="/wishlist" className="text-gray-600 hover:text-orange-500 text-2xl">
+            <FaHeart />
+          </Link>
+          <div className="relative">
+            <Link to="/cart" className="text-gray-600 hover:text-orange-500 text-2xl">
+              <FaShoppingCart />
+            </Link>
+            <span className="absolute -top-2 -right-2 bg-blue-500 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">0</span>
+          </div>
+        </div>
+      </div>
+    </nav>
+  );
 };
 
 export default Navbar;
