@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import logo from './../assets/Logo.jpg';
-import { FaShoppingCart, FaHeart, FaSearch, FaBars, FaTimes, FaUser} from "react-icons/fa";
+import { FaShoppingCart, FaSearch, FaBars, FaTimes, FaUser} from "react-icons/fa";
+import { useNavigate } from 'react-router-dom';
+
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <nav className="bg-white shadow-md px-4 py-3 relative">
@@ -30,9 +33,14 @@ const Navbar = () => {
 
         {/* Right Side: Search + Cart */}
         <div className="flex items-center space-x-4">
-          <Link to="/search" className="text-black text-xl hover:text-orange-500">
-            <FaSearch />
-          </Link>
+        <button
+          onClick={() =>
+           navigate('/searchpage')}
+          className="text-black text-xl hover:text-orange-500"
+          aria-label="Search"
+        >
+          <FaSearch />
+        </button>
           <div className="relative">
             <Link to="/cart" className="text-black text-xl hover:text-orange-500">
               <FaShoppingCart />
