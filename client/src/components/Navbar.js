@@ -18,8 +18,8 @@ const Navbar = () => {
           >
             {menuOpen ? <FaTimes /> : <FaBars />}
           </button>
-          <Link to="/wishlist" className="text-black text-xl hover:text-orange-500">
-            <FaHeart />
+          <Link to="/user" className="text-black text-xl hover:text-orange-500">
+            <FaUser />
           </Link>
         </div>
 
@@ -45,12 +45,12 @@ const Navbar = () => {
       {/* Mobile Dropdown Menu */}
       {menuOpen && (
         <div className="lg:hidden mt-3 px-4 space-y-3 font-poppins">
-          <ul className="flex flex-col space-y-3 text-base font-bold">
-            <li><Link to="/" className="hover:text-orange-500">Home</Link></li>
-            <li><Link to="/shop" className="hover:text-orange-500">Shop</Link></li>
-            <li><Link to="/wishlist" className="hover:text-orange-500">Wishlist</Link></li>
-            <li><Link to="/about" className="hover:text-orange-500">About</Link></li>
-            <li><Link to="/Contactus" className="hover:text-orange-500">Contact Us</Link></li>
+          <ul className="flex flex-col items-center text-base font-bold text-center divide-y divide-gray-300 w-full">
+            <li className="w-full py-2"><Link to="/" className="hover:text-orange-500">Home</Link></li>
+            <li className="w-full py-2"><Link to="/shop" className="hover:text-orange-500">Shop</Link></li>
+            <li className="w-full py-2"><Link to="/wishlist" className="hover:text-orange-500">Wishlist</Link></li>
+            <li className="w-full py-2"><Link to="/about" className="hover:text-orange-500">About</Link></li>
+            <li className="w-full py-2"><Link to="/Contactus" className="hover:text-orange-500">Contact Us</Link></li>
           </ul>
          
         </div>
