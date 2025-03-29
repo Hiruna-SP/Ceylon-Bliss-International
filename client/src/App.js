@@ -18,6 +18,10 @@ function App() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/login" element={<Login />} />
         <Route path="/about" element={<About />} />
+        <Route path="/wishlist" element={<h2>Wishlist Page</h2>} />
+        <Route path="/search" element={<h2>Search Page</h2>} />
+        <Route path="/Contactus" element={<h2>Contact Us Page</h2>} />
+        <Route path="/user" element={<h2>User Page</h2>} />
       </Routes>
     </Router>
   );

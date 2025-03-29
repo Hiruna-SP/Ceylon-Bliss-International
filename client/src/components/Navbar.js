@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import logo from './../assets/Logo.jpg';
-import { FaShoppingCart, FaHeart, FaSearch, FaBars, FaTimes } from "react-icons/fa";
+import { FaShoppingCart, FaHeart, FaSearch, FaBars, FaTimes, FaUser} from "react-icons/fa";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -44,12 +44,15 @@ const Navbar = () => {
 
       {/* Mobile Dropdown Menu */}
       {menuOpen && (
-        <div className="lg:hidden mt-3 px-4 space-y-3">
-          <Link to="/" className="block text-black font-semibold hover:text-orange-500">Home</Link>
-          <Link to="/shop" className="block text-black font-semibold hover:text-orange-500">Shop</Link>
-          <Link to="/cart" className="block text-black font-semibold hover:text-orange-500">Cart</Link>
-          <Link to="/login" className="block text-black font-semibold hover:text-orange-500">Login</Link>
-          <Link to="/about" className="block text-black font-semibold hover:text-orange-500">About</Link>
+        <div className="lg:hidden mt-3 px-4 space-y-3 font-poppins">
+          <ul className="flex flex-col space-y-3 text-base font-bold">
+            <li><Link to="/" className="hover:text-orange-500">Home</Link></li>
+            <li><Link to="/shop" className="hover:text-orange-500">Shop</Link></li>
+            <li><Link to="/wishlist" className="hover:text-orange-500">Wishlist</Link></li>
+            <li><Link to="/about" className="hover:text-orange-500">About</Link></li>
+            <li><Link to="/Contactus" className="hover:text-orange-500">Contact Us</Link></li>
+          </ul>
+         
         </div>
       )}
 
@@ -61,12 +64,12 @@ const Navbar = () => {
         </div>
 
         {/* Navigation Links */}
-        <ul className="flex space-x-10 text-base font-bold">
+        <ul className="flex space-x-10 text-base font-bold font-poppins">
           <li><Link to="/" className="hover:text-orange-500">Home</Link></li>
           <li><Link to="/shop" className="hover:text-orange-500">Shop</Link></li>
-          <li><Link to="/cart" className="hover:text-orange-500">Cart</Link></li>
-          <li><Link to="/login" className="hover:text-orange-500">Login</Link></li>
+          <li><Link to="/wishlist" className="hover:text-orange-500">Wishlist</Link></li>
           <li><Link to="/about" className="hover:text-orange-500">About</Link></li>
+          <li><Link to="/Contactus" className="hover:text-orange-500">Contact Us</Link></li>
         </ul>
 
         {/* Search Bar + Icons */}
@@ -84,8 +87,8 @@ const Navbar = () => {
               <FaSearch className="text-lg" />
             </button>
           </div>
-          <Link to="/wishlist" className="text-gray-600 hover:text-orange-500 text-2xl">
-            <FaHeart />
+          <Link to="/user" className="text-gray-600 hover:text-orange-500 text-2xl">
+            <FaUser />
           </Link>
           <div className="relative">
             <Link to="/cart" className="text-gray-600 hover:text-orange-500 text-2xl">

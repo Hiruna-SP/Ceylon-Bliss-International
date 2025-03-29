@@ -5,6 +5,7 @@ module.exports = {
       extend: {
         fontFamily: {
           boldonse: ['Boldonse', 'system-ui', 'sans-serif'],
+          poppins: ['Poppins', 'sans-serif'],
         },
       },
     },
