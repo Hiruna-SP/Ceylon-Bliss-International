@@ -8,6 +8,7 @@ module.exports = {
           poppins: ['Poppins', 'sans-serif'],
           merriweather: ['Merriweather', 'serif'],
           cinzel: ['Cinzel', 'serif'],
+          lobster: ['"Lobster Two"', 'cursive'],
         },
       },
     },
