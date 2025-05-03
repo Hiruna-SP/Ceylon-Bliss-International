@@ -6,6 +6,8 @@ module.exports = {
         fontFamily: {
           boldonse: ['Boldonse', 'system-ui', 'sans-serif'],
           poppins: ['Poppins', 'sans-serif'],
+          merriweather: ['Merriweather', 'serif'],
+          cinzel: ['Cinzel', 'serif'],
         },
       },
     },

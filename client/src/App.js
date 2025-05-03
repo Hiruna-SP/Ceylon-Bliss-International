@@ -1,9 +1,16 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import HeroSection from "./components/HeroSection";
 import SearchPage from "./pages/SearchPage";
 
-const Home = () => <h2>Home Page</h2>;
+const Home = () => (
+  <>
+    <HeroSection />
+    <h2 className="text-center mt-8 text-xl font-medium">Welcome to Ceylon Bliss International</h2>
+  </>
+);
+
 const Shop = () => <h2>Shop Page</h2>;
 const Cart = () => <h2>Cart Page</h2>;
 const Login = () => <h2>Login Page</h2>;
