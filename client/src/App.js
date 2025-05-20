@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import SearchPage from "./pages/SearchPage";
+import ContactUs from "./pages/ContactUs";
+
 
 const Home = () => (
   <>
@@ -28,7 +30,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/wishlist" element={<h2>Wishlist Page</h2>} />
         <Route path="searchpage" element={<SearchPage/>} />
-        <Route path="/Contactus" element={<h2>Contact Us Page</h2>} />
+        <Route path="/Contactus" element={<ContactUs/>} />
         <Route path="/user" element={<h2>User Page</h2>} />
       </Routes>
     </Router>
