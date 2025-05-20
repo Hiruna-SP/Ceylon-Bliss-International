@@ -1,7 +1,17 @@
 import React from 'react';
+import { useNavigate } from "react-router-dom";
+
 import heroImg from './../assets/Hero-bg.jpg';
 
 const HeroSection = () => {
+
+  const navigate = useNavigate();
+
+  const shopNowButtonNavigation = () => {
+    navigate('/shop');
+  }
+
+
   return (
     <div
       className="relative h-[80vh] bg-cover bg-center flex items-center justify-start text-white"
@@ -18,7 +28,9 @@ const HeroSection = () => {
         <p className="text-orange-200 text-2xl mt-4 mb-6 font-lobster drop-shadow-lg">
           Finely selected spices, crafted to capture true Ceylon flavor.
         </p>
-        <button className="px-7 py-3 font-cinzel font-medium text-white bg-orange-500 rounded-xl border-none hover:bg-gradient-to-r hover:from-orange-600 hover:to-yellow-500 hover:scale-110 transform transition-all duration-300 ease-in-out shadow-md hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-orange-300">
+        <button 
+        onClick={shopNowButtonNavigation}
+        className="px-7 py-3 font-cinzel font-medium text-white bg-orange-500 rounded-xl border-none hover:bg-gradient-to-r hover:from-orange-600 hover:to-yellow-500 hover:scale-110 transform transition-all duration-300 ease-in-out shadow-md hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-orange-300">
           Shop Now
         </button>
       </div>
