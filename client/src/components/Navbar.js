@@ -72,7 +72,7 @@ const Navbar = () => {
         </div>
 
         {/* Navigation Links */}
-        <ul className="flex space-x-10 text-base font-bold font-poppins">
+        <ul className="flex space-x-10 text-base font-bold font-cinzel text-2xl">
           <li><Link to="/" className="hover:text-orange-500">Home</Link></li>
           <li><Link to="/shop" className="hover:text-orange-500">Shop</Link></li>
           <li><Link to="/wishlist" className="hover:text-orange-500">Wishlist</Link></li>
