@@ -30,7 +30,7 @@ const HeroSection = () => {
         </p>
         <button 
         onClick={shopNowButtonNavigation}
-        className="px-7 py-3 font-cinzel font-medium text-white bg-orange-500 rounded-xl border-none hover:bg-gradient-to-r hover:from-orange-600 hover:to-yellow-500 hover:scale-110 transform transition-all duration-300 ease-in-out shadow-md hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-orange-300">
+        className="px-7 py-3 font-cinzel font-large text-white bg-orange-500 rounded-xl border-none hover:bg-gradient-to-r hover:from-orange-600 hover:to-yellow-500 hover:scale-110 transform transition-all duration-300 ease-in-out shadow-md hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-orange-300">
           Shop Now
         </button>
       </div>
