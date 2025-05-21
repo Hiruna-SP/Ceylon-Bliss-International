@@ -34,14 +34,14 @@ const ContactUs = () => {
             value={formData.name}
             onChange={handleChange}
             required
-            className="w-full bg-white text-black border-2 border-gray-300 rounded-md px-4 py-2 peer focus:outline-none focus:ring-2 focus:ring-orange-500"
+            className="w-full bg-white font-poppins text-black border-2 border-gray-300 rounded-md px-4 py-3 peer focus:outline-none focus:ring-2 focus:ring-orange-500"
             placeholder=" "
           />
           <label
             htmlFor="name"
-            className="absolute text-gray-500 bg-white px-1 transition-all duration-300 transform top-0 left-3
-                      text-sm peer-placeholder-shown:text-base peer-placeholder-shown:translate-y-2
-                      peer-focus:text-10px peer-focus:-translate-y-3"
+            className="absolute left-3 font-merriweather top-2 bg-white px-1 text-sm text-gray-500 transition-all duration-300
+      peer-focus:top-[-12px] peer-focus:text-lg
+      peer-valid:top-[-12px] peer-valid:text-md"
           >
             Full Name
           </label>
@@ -57,12 +57,14 @@ const ContactUs = () => {
             value={formData.email}
             onChange={handleChange}
             required
-            className="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-400 peer transition-all duration-300"
+            className="w-full bg-white font-poppins text-black border-2 border-gray-300 rounded-md px-4 py-3 peer focus:outline-none focus:ring-2 focus:ring-orange-500"
             placeholder=" "
           />
           <label
             htmlFor="email"
-            className="absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 left-4 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:-translate-y-6 peer-focus:scale-75"
+            className="absolute left-3 font-merriweather top-2 bg-white px-1 text-sm text-gray-500 transition-all duration-300
+      peer-focus:top-[-12px] peer-focus:text-lg
+      peer-valid:top-[-12px] peer-valid:text-md"
           >
             Email address
           </label>
@@ -77,12 +79,14 @@ const ContactUs = () => {
             value={formData.phonenumber}
             onChange={handleChange}
             required
-            className="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-400 peer transition-all duration-300"
+            className="w-full bg-white font-poppins text-black border-2 border-gray-300 rounded-md px-4 py-3 peer focus:outline-none focus:ring-2 focus:ring-orange-500"
             placeholder=" "
           />
           <label
             htmlFor="phonenumber"
-            className="absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 left-4 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:-translate-y-6 peer-focus:scale-75"
+            className="absolute left-3 font-merriweather top-2 bg-white px-1 text-sm text-gray-500 transition-all duration-300
+      peer-focus:top-[-12px] peer-focus:text-lg
+      peer-valid:top-[-12px] peer-valid:text-md"
           >
             Phone Number
           </label>
@@ -97,12 +101,14 @@ const ContactUs = () => {
             value={formData.message}
             onChange={handleChange}
             required
-            className="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-400 peer resize-none transition-all duration-300"
+            className="w-full bg-white font-poppins text-black border-2 border-gray-300 rounded-md px-4 py-3 peer focus:outline-none focus:ring-2 focus:ring-orange-500"
             placeholder=" "
           ></textarea>
           <label
             htmlFor="message"
-            className="absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 left-4 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:-translate-y-6 peer-focus:scale-75"
+            className="absolute left-3 font-merriweather top-2 bg-white px-1 text-sm text-gray-500 transition-all duration-300
+      peer-focus:top-[-12px] peer-focus:text-lg
+      peer-valid:top-[-12px] peer-valid:text-md"
           >
             Your Message
           </label>
