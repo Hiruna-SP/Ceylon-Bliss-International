@@ -21,7 +21,7 @@ const ContactUs = () => {
 
   return (
     <div className="max-w-3xl mx-auto p-6 mt-10 bg-white shadow-lg rounded-lg">
-      <h2 className="text-3xl font-bold mb-6 text-center text-orange-600">
+      <h2 className="text-3xl font-cinzel mb-6 text-center text-orange-600">
         Contact Us
       </h2>
       <form onSubmit={handleSubmit} className="space-y-6">
@@ -40,8 +40,8 @@ const ContactUs = () => {
           <label
             htmlFor="name"
             className="absolute left-3 font-merriweather top-2 bg-white px-1 text-sm text-gray-500 transition-all duration-300
-      peer-focus:top-[-12px] peer-focus:text-lg
-      peer-valid:top-[-12px] peer-valid:text-md"
+                      peer-focus:top-[-12px] peer-focus:text-lg
+                      peer-valid:top-[-12px] peer-valid:text-md"
           >
             Full Name
           </label>
@@ -117,7 +117,7 @@ const ContactUs = () => {
         {/* Submit Button */}
         <button
           type="submit"
-          className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 rounded-lg transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-orange-300"
+          className="w-full bg-orange-500 hover:bg-orange-600 text-white font-cinzel py-3 rounded-lg transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-orange-300"
         >
           Send Message
         </button>
