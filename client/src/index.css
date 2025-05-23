@@ -1,3 +1,10 @@
+/* Remove these lines if not using Tailwind CSS with PostCSS, or ensure your build process supports Tailwind directives */
+
+@import 'tailwindcss/base.css';
+@import 'tailwindcss/components.css';
+@import 'tailwindcss/utilities.css';
+
+
 
 input:-webkit-autofill,
 input:-webkit-autofill:hover, 
