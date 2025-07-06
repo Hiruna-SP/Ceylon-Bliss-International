@@ -34,18 +34,30 @@ const products = [
 
 // Reusable Card component
 const Card = ({ product }) => (
-  <div className="w-full max-w-sm bg-white p-5 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-200">
-    <div className="overflow-hidden rounded-lg mb-4">
-      <img
-        src={product.image}
-        alt={product.name}
-        className="w-full h-48 object-cover transform hover:scale-105 transition-transform duration-300"
-      />
+  <div className="w-full max-w-sm h-[430px] bg-white p-5 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-200 flex flex-col">
+    
+    {/* Top */}
+    <div>
+      {/* Image box */}
+      <div className="w-full h-48 mb-4 rounded-lg overflow-hidden bg-gray-100 flex items-center justify-center">
+        <img
+          src={product.image}
+          alt={product.name}
+          className="h-full w-full object-cover"
+        />
+      </div>
+
+      {/* Name, weight, description */}
+      <h3 className="text-xl font-semibold text-orange-700 mb-1">{product.name}</h3>
+      <p className="text-gray-500 text-sm mb-1">{product.weight}</p>
+      <p className="text-gray-600 text-sm text-justify line-clamp-3">{product.description}</p>
     </div>
-    <h3 className="text-xl font-semibold text-orange-700 mb-1">{product.name}</h3>
-    <p className="text-gray-500 text-sm mb-2">{product.weight}</p>
-    <p className="text-gray-600 text-sm mb-3">{product.description}</p>
-    <div className="flex items-center justify-between mt-4">
+
+    {/* Spacer that pushes footer down only as needed */}
+    <div className="flex-grow"></div>
+
+    {/* Bottom */}
+    <div className="flex items-center justify-between pt-4">
       <span className="text-lg font-bold text-green-600">{product.price}</span>
       <button
         className="bg-orange-500 hover:bg-orange-600 text-white text-sm px-4 py-2 rounded transition duration-300"
@@ -56,6 +68,9 @@ const Card = ({ product }) => (
     </div>
   </div>
 );
+
+
+
 
 const ShopPage = () => {
   return (
