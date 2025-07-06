@@ -2,6 +2,7 @@ import React from 'react';
 import cinnamon from "./../assets/Cinnamon.png";
 import blackpepper from "./../assets/blackpepper.jpg";
 import cardamom from "./../assets/cardamon.jpeg";
+import spice from "./../assets/spice.jpg";
 
 // Product data
 const products = [
@@ -58,17 +59,26 @@ const Card = ({ product }) => (
 
 const ShopPage = () => {
   return (
-    <div className="min-h-screen bg-gray-50 px-4 py-12 flex flex-col items-center">
-      {/* 🧾 Heading */}
-      <h2 className="text-4xl font-cinzel font-bold text-orange-600 text-center mb-12">
-        Explore Our Premium Ceylon Spices
-      </h2>
+    <div className="relative min-h-screen w-full overflow-hidden">
+      {/* 🔲 Background Image with Blur */}
+      <div
+        className="absolute inset-0 bg-cover bg-center filter blur-sm opacity-90"
+        style={{ backgroundImage: `url(${spice})` }} // replace with your path
+      ></div>
 
-      {/* 🧱 Horizontal Card Row */}
-      <div className="flex space-x-10 w-full max-w-6xl justify-center items-center">
-        {products.map((product) => (
-          <Card key={product.id} product={product} />
-        ))}
+      {/* 🔳 Foreground Content */}
+      <div className="relative z-10 px-4 py-12 flex flex-col items-center min-h-screen">
+        {/* 🧾 Heading */}
+        <h2 className="text-4xl font-cinzel font-bold text-orange-600 text-center mb-12">
+          Explore Our Premium Ceylon Spices
+        </h2>
+
+        {/*  Horizontal Card Row */}
+        <div className="flex space-x-10 w-full max-w-6xl justify-center items-center">
+          {products.map((product) => (
+            <Card key={product.id} product={product} />
+          ))}
+        </div>
       </div>
     </div>
   );
