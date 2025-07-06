@@ -6,6 +6,11 @@ import HeroSection from "./components/HeroSection";
 import SearchPage from "./pages/SearchPage";
 import ContactUs from "./pages/ContactUs";
 import AboutUs from "./pages/AboutUs";
+import ShopPage from "./pages/ShopPage";
+
+// Inside <Routes>
+
+
 
 
 const Home = () => (
@@ -15,9 +20,10 @@ const Home = () => (
   </>
 );
 
-const Shop = () => <h2>Shop Page</h2>;
+
 const Cart = () => <h2>Cart Page</h2>;
 const Login = () => <h2>Login Page</h2>;
+
 
 function App() {
   return (
@@ -25,7 +31,6 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/shop" element={<Shop />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/login" element={<Login />} />
         <Route path="/about" element={<AboutUs />} />
@@ -33,6 +38,7 @@ function App() {
         <Route path="searchpage" element={<SearchPage/>} />
         <Route path="/contactus" element={<ContactUs/>} />
         <Route path="/user" element={<h2>User Page</h2>} />
+        <Route path="/shop" element={<ShopPage />} />
       </Routes>
     </Router>
   );
