@@ -52,7 +52,8 @@ const Card = ({ product }) => {
   const total = "$"+(unitPrice * amount).toFixed(2);
 
   return (
-    <div className="w-full max-w-sm h-[520px] bg-white p-5 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-200 flex flex-col">
+  <div className="w-full max-w-sm h-[520px] bg-white/85 hover:bg-white/75 backdrop-blur-md p-5 rounded-xl shadow-md transition-all duration-300 border border-gray-100 flex flex-col hover:scale-105 hover:drop-shadow-lg">
+
       {/* Top */}
       <div>
         {/* Image box */}
