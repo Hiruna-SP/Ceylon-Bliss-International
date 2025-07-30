@@ -1,6 +1,21 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Remove these lines if not using Tailwind CSS with PostCSS, or ensure your build process supports Tailwind directives */
+
+@import 'tailwindcss/base.css';
+@import 'tailwindcss/components.css';
+@import 'tailwindcss/utilities.css';
+
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0px 1000px #ffffff inset !important; /* background override */
+  -webkit-text-fill-color: rgb(0, 0, 0) !important;               /* text color */
+  caret-color: rgb(0, 0, 0) !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
 
 
 body {
