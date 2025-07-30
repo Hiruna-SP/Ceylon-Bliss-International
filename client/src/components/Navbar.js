@@ -56,7 +56,6 @@ const Navbar = () => {
           <ul className="flex flex-col items-center text-base font-bold text-center divide-y divide-gray-300 w-full">
             <li className="w-full py-2"><Link to="/" className="hover:text-orange-500">Home</Link></li>
             <li className="w-full py-2"><Link to="/shoppage" className="hover:text-orange-500">Shop</Link></li>
-            <li className="w-full py-2"><Link to="/wishlist" className="hover:text-orange-500">Wishlist</Link></li>
             <li className="w-full py-2"><Link to="/about" className="hover:text-orange-500">About</Link></li>
             <li className="w-full py-2"><Link to="/Contactus" className="hover:text-orange-500">Contact Us</Link></li>
           </ul>
@@ -75,7 +74,6 @@ const Navbar = () => {
         <ul className="flex space-x-10 text-base font-bold font-cinzel text-2xl">
           <li><Link to="/" className="hover:text-orange-500">Home</Link></li>
           <li><Link to="/shop" className="hover:text-orange-500">Shop</Link></li>
-          <li><Link to="/wishlist" className="hover:text-orange-500">Wishlist</Link></li>
           <li><Link to="/about" className="hover:text-orange-500">About</Link></li>
           <li><Link to="/Contactus" className="hover:text-orange-500">Contact Us</Link></li>
         </ul>
